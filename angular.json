@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pro-dashboard-angular": {
+    "lightning-admin-angular": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/pro-dashboard-angular",
+            "outputPath": "demo",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "pro-dashboard-angular:build"
+            "browserTarget": "lightning-admin-angular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "pro-dashboard-angular:build:production"
+              "browserTarget": "lightning-admin-angular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pro-dashboard-angular:build"
+            "browserTarget": "lightning-admin-angular:build"
           }
         },
         "test": {
@@ -106,7 +106,7 @@
         }
       }
     },
-    "pro-dashboard-angular-e2e": {
+    "lightning-admin-angular-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -115,11 +115,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "pro-dashboard-angular:serve"
+            "devServerTarget": "lightning-admin-angular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "pro-dashboard-angular:serve:production"
+              "devServerTarget": "lightning-admin-angular:serve:production"
             }
           }
         },
@@ -135,5 +135,5 @@
       }
     }
   },
-  "defaultProject": "pro-dashboard-angular"
+  "defaultProject": "lightning-admin-angular"
 }
