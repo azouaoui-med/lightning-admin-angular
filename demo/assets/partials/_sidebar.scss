@@ -1,0 +1,133 @@
+.wrapper {
+  main {
+    position: relative;
+
+    .sidebar {
+      height: 100%;
+      width: $sidebar-width;
+      position: absolute;
+      transition: left .3s ease;
+      left: -$sidebar-width;
+      top: 0;
+      z-index: 111;
+      overflow: auto;
+      > div{
+        border-bottom: 1px solid;
+        &:last-child{
+          border-bottom: none;
+        }
+      }
+      .sidebar-profile {
+
+        .user-picture {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+
+        .profile-details {
+          .name {
+            font-size: .9rem;
+            font-weight: 800;
+          }
+
+          .role {
+            font-size: .7rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+          }
+        }
+      }
+
+      .sidebar-search {
+        display: none;
+      }
+
+      .sidebar-menu {
+
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+
+          li {
+            display: block;
+
+            a {
+              text-decoration: none;
+              display: flex;
+              align-items: center;
+              width: 100%;
+              height: 55px;
+              line-height: 55px;
+              padding: 0 1.5rem;
+              color: $sidebar-color;
+              font-size: 0.75rem;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+
+              i {
+                @extend .icon-style;
+              }
+
+              span {
+                color: inherit;
+                margin-left: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 768px) {
+      .sidebar {
+        position: static;
+        height: 100%;
+      }
+    }
+  }
+
+  &.pinned-sidebar {
+    @media (min-width: 768px) {
+      .sidebar {
+        width: 70px;
+
+        .sidebar-profile {
+
+          .user-picture {
+            width: 40px;
+            height: 40px;
+          }
+
+          .profile-details {
+            display: none;
+          }
+        }
+        .sidebar-menu{
+          ul a{
+            padding: .5rem;
+            justify-content: center;
+            span {
+             display: none;
+           }
+          }
+        }
+      }
+
+    }
+  }
+   &.toggeled-sidebar {
+    .sidebar {
+      left: 0;
+    }
+  }
+}
