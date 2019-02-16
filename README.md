@@ -1,8 +1,11 @@
 # Lightning Admin Angular
 
-A mobile first design of a responsive admin template built with angular and bootstrap
+A mobile first design of a responsive admin template built with angular and bootstrap 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
+
+## Demo
+[Live preview](https://azouaoui-med.github.io/lightning-admin-angular/demo/)
 
 ## Quick start
 
