@@ -1,0 +1,140 @@
+<div>
+  <h4 class="mb-4 text-muted">Dashboard </h4>
+
+  <div class="row">
+
+    <div class="col-md-6 col-lg-3 mb-4">
+      <div class="card border-0 rounded-0">
+        <div class="card-body">
+          <div class="card-innerBody d-flex align-items-center">
+            <div class="card-icon text-light">
+              <i class="fa fa-dollar bg-success" aria-hidden="true"></i>
+            </div>
+            <div class="ml-auto">
+              <p class="card-title text-right text-muted">Revenue</p>
+              <h4 class="card-text text-right ">$ 199,099</h4>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer d-flex ">
+          <small class="text-muted">Since last month</small>
+          <small class="text-success ml-auto">
+            <i class="fa fa-caret-up" aria-hidden="true"></i>
+            5,35%
+          </small>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3 mb-4">
+      <div class="card border-0 rounded-0">
+        <div class="card-body">
+          <div class="card-innerBody d-flex align-items-center">
+            <div class="card-icon text-light">
+              <i class="fa fa-shopping-cart bg-info" aria-hidden="true"></i>
+            </div>
+            <div class="ml-auto">
+              <p class="card-title text-right text-muted">Orders</p>
+              <h4 class="card-text text-right ">2,200</h4>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer d-flex ">
+          <small class="text-muted">Since last month</small>
+          <small class="text-success ml-auto">
+            <i class="fa fa-caret-up" aria-hidden="true"></i>
+            8,66%
+          </small>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3 mb-4">
+      <div class="card border-0 rounded-0">
+        <div class="card-body">
+          <div class="card-innerBody d-flex align-items-center">
+            <div class="card-icon text-light">
+              <i class="fa fa-users bg-danger" aria-hidden="true"></i>
+            </div>
+            <div class="ml-auto">
+              <p class="card-title text-right text-muted">Visitors</p>
+              <h4 class="card-text text-right ">702,258</h4>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer d-flex ">
+          <small class="text-muted">Since last month</small>
+          <small class="text-danger ml-auto">
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+            2,81%
+          </small>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3 mb-4">
+      <div class="card border-0 rounded-0">
+        <div class="card-body">
+          <div class="card-innerBody d-flex align-items-center">
+            <div class="card-icon text-light">
+              <i class="fa fa-heartbeat bg-warning" aria-hidden="true"></i>
+            </div>
+            <div class="ml-auto">
+              <p class="card-title text-right text-muted">Followers</p>
+              <h4 class="card-text text-right "> +50K</h4>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer d-flex ">
+          <small class="text-muted">Since last month</small>
+          <small class="text-success ml-auto">
+            <i class="fa fa-caret-up" aria-hidden="true"></i>
+            1,74%
+          </small>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12 col-lg-6 mb-4">
+      <div class="card border-0 rounded-0">
+        <div class="card-body">
+          <div class="card-title">
+            <h5>Chart Line</h5>
+          </div>
+          <div class="chart-container" style="position: relative;">
+            <canvas id="sales-line" width="2" height="1">{{ chartLine }}</canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-lg-6 mb-4">
+      <div class="card border-0 rounded-0">
+        <div class="card-body">
+          <div class="card-title">
+            <h5>Chart Bar</h5>
+          </div>
+          <div class="chart-container" style="position: relative;">
+            <canvas id="sales-bar" width="2" height="1">{{ chartBar }}</canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 mb-4">
+      <div class="card border-0 rounded-0">
+        <div class="card-body">
+          <div class="card-title">
+            <h5>Horizontal Chart Bar</h5>
+          </div>
+          <div class="chart-container" style="position: relative;">
+            <canvas id="sales-hbar" width="300" height="100">{{ chartHbar }}</canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

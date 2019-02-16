@@ -1,0 +1,73 @@
+$bg-color:#e9eaec;
+$navbar-bg-color : #25292f;
+$navbar-header-bg-color:#2f353e;
+$navbar-color:#676f7b;
+$sidebar-bg-color:#fff;
+$sidebar-color:#75797d;
+
+.wrapper.default-theme {
+
+  background: $bg-color;
+
+  nav.navbar {
+    background: $navbar-bg-color;
+    border-color: rgba($navbar-color, .3);
+
+    // .navbar-header {
+    //   background: $navbar-header-bg-color;
+    // }
+
+    .navbar-brand {
+      color: lighten($navbar-color, 25%);
+    }
+
+    .left-nav {
+      input.navbar-search {
+        // background-color: $navbar-bg-color;
+        border-color: $navbar-color;
+      }
+    }
+
+    .right-nav {
+      background: $navbar-bg-color;
+    }
+
+    .nav-link {
+      color: $navbar-color;
+
+      i {
+        border-color: $navbar-color;
+      }
+
+      &:hover {
+        color: lighten($navbar-color, 15%);
+      }
+    }
+    .nav-alert{
+      border-color:$navbar-bg-color;
+    }
+  }
+
+  main {
+    .sidebar {
+      background: $sidebar-bg-color;
+      > div{
+        border-color: rgba($sidebar-color,.4);
+      }
+      a.sidebar-link {
+        color: $sidebar-color;
+
+      }
+
+      .sidebar-profile {
+        .name {
+          color: $sidebar-color;
+        }
+
+        .role {
+          color: rgba($sidebar-color, .5);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-md fixed-top navbar-dark flex-fill">
+  <!-- sidebar toggler -->
+  <!-- <button class="sidebar-toggler ml-4" type="button">
+    <i class="fa fa-navicon"></i>
+  </button> -->
+  <div class="sidebar-toggler ml-4">
+    <a class="btn nav-link" (click)="toggleSidebar()"><i class="fa fa-navicon"></i></a>
+  </div>
+  <!-- header -->
+  <div class="navbar-header pl-2 pr-2 text-center">
+    <a class="navbar-brand m-0 text-uppercase w-100" href="#">
+      <!-- <i class="fa fa-flash mr-1"></i> -->
+      <span class="ml-1">lightning</span>
+    </a>
+  </div>
+  <!-- left box -->
+  <ul class="navbar-nav flex-fill mt-1 align-items-center left-nav">
+    <li class="nav-item navicon">
+      <a class="btn nav-link" (click)="toggleSidebarPin()"><i class="fa fa-navicon"></i></a>
+    </li>
+    <li class="nav-item flex-fill">
+      <input class="form-control navbar-search" type="text" placeholder="Search">
+    </li>
+  </ul>
+  <!-- right menu toggler -->
+  <div class="nav-toggler-right mr-4 d-md-none">
+    <button class="" type="button"(click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">
+      <!-- <span class="navbar-toggler-icon"></span> -->
+      <img src="./assets/img/user.jpg" class="img-fluid" alt="">
+    </button>
+    <span class="nav-alert bg-danger"></span>
+  </div>
+  <!-- right menu -->
+  <div class="collapse navbar-collapse right-nav" id="collapseBasic" [collapse]="isCollapsed">
+    <ul class="navbar-nav ">
+      <li class="nav-item">
+        <a class="btn nav-link">
+          <i class="fa fa-bell-o"></i>
+          <span class="link-text">Alerts</span>
+          <!-- <span class="badge badge-pill ba dge-danger">3</span> -->
+          <span class="nav-alert bg-danger"></span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="btn nav-link">
+          <i class="fa fa-envelope-o"></i>
+          <span class="link-text">Messages</span>
+          <!-- <span class="badge badge-pill badge-success">5</span> -->
+          <span class="nav-alert bg-success"></span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="btn nav-link">
+          <i class="fa fa-user-o"></i>
+          <span class="link-text">Profile</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="btn nav-link">
+          <i class="fa fa-gears"></i>
+          <span class="link-text">Setting</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+
+</nav>
