@@ -102,11 +102,11 @@
     <div class="col-md-12 col-lg-6 mb-4">
       <div class="card border-0 rounded-0">
         <div class="card-body">
-          <div class="card-title">
+          <div class="card-title mb-4">
             <h5>Chart Line</h5>
           </div>
           <div class="chart-container" style="position: relative;">
-            <canvas id="sales-line" width="2" height="1">{{ chartLine }}</canvas>
+            <canvas id="chart-line" width="2" height="1"></canvas>
           </div>
         </div>
       </div>
@@ -114,23 +114,47 @@
     <div class="col-md-12 col-lg-6 mb-4">
       <div class="card border-0 rounded-0">
         <div class="card-body">
-          <div class="card-title">
+          <div class="card-title mb-4">
             <h5>Chart Bar</h5>
           </div>
           <div class="chart-container" style="position: relative;">
-            <canvas id="sales-bar" width="2" height="1">{{ chartBar }}</canvas>
+            <canvas id="chart-bar" width="2" height="1"></canvas>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-md-12 mb-4">
+    <div class="col-md-12 col-lg-4 mb-4">
       <div class="card border-0 rounded-0">
         <div class="card-body">
-          <div class="card-title">
-            <h5>Horizontal Chart Bar</h5>
+          <div class="card-title mb-4">
+            <h5>Chart Pie</h5>
           </div>
           <div class="chart-container" style="position: relative;">
-            <canvas id="sales-hbar" width="300" height="100">{{ chartHbar }}</canvas>
+            <canvas id="chart-pie" ></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-lg-4 mb-4">
+      <div class="card border-0 rounded-0">
+        <div class="card-body">
+          <div class="card-title mb-4">
+            <h5>Chart Doughnut</h5>
+          </div>
+          <div class="chart-container" style="position: relative;">
+            <canvas id="chart-doughnut" ></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-lg-4 mb-4">
+      <div class="card border-0 rounded-0">
+        <div class="card-body">
+          <div class="card-title mb-4">
+            <h5>Chart Polar Area</h5>
+          </div>
+          <div class="chart-container" style="position: relative;">
+            <canvas id="chart-polar" ></canvas>
           </div>
         </div>
       </div>

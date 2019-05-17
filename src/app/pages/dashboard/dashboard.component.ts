@@ -7,82 +7,136 @@ import { Chart } from 'chart.js';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  chartLine = [];
-  chartBar = [];
-  chartHbar = [];
-  data = {
-    labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
-    datasets: [{
-        label: '# of Votes',
-        data: [50, 100, 60, 120, 80, 100, 60, 120, 60, 100, 80, 150],
-        backgroundColor: 'rgba(255, 99, 132, 0.4)',
-        borderColor: 'rgba(255,99,132,.6)',
-        borderWidth: 1
-    }]
-  };
-  data2 = {
-    labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-    datasets: [{
-        label: '# of Votes',
-        data: [0.5, 0.8, 0.4, 0.6, 0.5, 0.3, 0.9],
-        backgroundColor: 'rgba(255, 99, 132, 0.4)',
-        borderColor: 'rgba(255,99,132,.6)',
-        borderWidth: 1
-    }]
-  };
-  options = {
-    scales: {
-        yAxes: [{
-          ticks: {
-              fontColor: 'rgba(0,0,0,.6)',
-              fontStyle: 'bold',
-              beginAtZero: true,
-              maxTicksLimit: 8,
-              padding: 10
-          },
-          gridLines: {
-              drawTicks: true,
-              drawBorder: true,
-              display: true,
-              color: 'rgba(0,0,0,.1)',
-              // zeroLineColor: 'transparent'
-          }
 
-      }],
-        xAxes: [{
-          gridLines: {
-              // zeroLineColor: 'transparent',
-              display: true,
 
-          },
-          ticks: {
-              padding: 0,
-              fontColor: 'rgba(0,0,0,0.6)',
-              fontStyle: 'bold'
-          }
-      }]
+  chart1 = {
+    data :{
+      labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+      datasets: [{
+          label: 'Premium',
+          data: [50, 80, 60, 120, 80, 100, 60],
+          backgroundColor: 'transparent',
+          borderColor: '#f74d71',
+          borderWidth: 2
+      },
+      {
+        label: 'Free',
+        data: [100, 60, 80, 50, 140, 60, 100],
+        backgroundColor: 'transparent',
+        borderColor: '#36a2eb',
+        borderWidth: 2
+      }
+    ]
     },
-    responsive: true
+    options:{
+      scales: {
+          yAxes: [{
+            ticks: {
+                fontColor: 'rgba(0,0,0,.6)',
+                fontStyle: 'bold',
+                beginAtZero: true,
+                maxTicksLimit: 8,
+                padding: 10
+            }          
+        }]       
+      },
+      responsive: true,
+      legend: {          
+        position:'bottom',
+        display:false
+      },
+    }
   };
+  chart2 = {
+    data :{
+      labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+      datasets: [{
+          label: 'Premium',
+          data: [50, 80, 60, 120, 80, 100, 60],
+          backgroundColor: '#f74d71',
+          borderColor: '#f74d71',
+          borderWidth: 2
+      },
+      {
+        label: 'Free',
+        data: [100, 60, 80, 50, 140, 60, 100],
+        backgroundColor: '#36a2eb',
+        borderColor: '#36a2eb',
+        borderWidth: 2
+      }
+    ]
+    },
+    options:{
+      barValueSpacing: 1,
+      scales: {
+          yAxes: [{
+            ticks: {
+                fontColor: 'rgba(0,0,0,.6)',
+                fontStyle: 'bold',
+                beginAtZero: true,
+                maxTicksLimit: 8,
+                padding: 10
+            }          
+        }],
+        xAxes: [{
+          barPercentage: 0.4      
+      }]       
+      },
+      responsive: true,
+      legend: {          
+        position:'bottom',
+        display:false
+      },
+    }
+  };
+  chart3 = {
+    data:{
+      datasets: [{
+          data: [10, 20, 30],
+          backgroundColor: ["#f74d71","#ffc107","#36a2eb"],
+      }],
+      labels: [
+          'Red',
+          'Yellow',
+          'Blue'
+      ]
+      
+    },
+    options:{
+      legend: {          
+        position:'bottom'
+      },
+    }
+  };
+
   constructor() { }
 
   ngOnInit() {
 
-    this.chartLine = new Chart('sales-line',  {
+ new Chart('chart-line',  {
       type: 'line',
-      data: this.data ,
-      options: this.options
+      data: this.chart1.data,
+      options: this.chart1.options
     });
-
-    this.chartBar = new Chart('sales-bar',  {
+ new Chart('chart-bar',  {
       type: 'bar',
-      data: this.data ,
-      options: this.options
+      data: this.chart2.data ,
+      options: this.chart2.options
     });
-    this.chartHbar = new Chart('sales-hbar',  {
-      type: 'horizontalBar',
-      data: this.data2 ,
-      options: this.options
+    new Chart('chart-pie',  {
+      type: 'pie',
+      data: this.chart3.data,
+      options:this.chart3.options
+    });
+ new Chart('chart-doughnut',  {
+      type: 'doughnut',
+      data: this.chart3.data,
+      options:this.chart3.options
+    });
+ new Chart('chart-polar',  {
+      type: 'polarArea',
+      data: this.chart3.data,
+      options:this.chart3.options
     });
   }
 
