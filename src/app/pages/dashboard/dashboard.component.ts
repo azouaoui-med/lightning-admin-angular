@@ -16,7 +16,7 @@ export class DashboardComponent implements OnInit {
           label: 'Premium',
           data: [50, 80, 60, 120, 80, 100, 60],
           backgroundColor: 'transparent',
-          borderColor: '#f74d71',
+          borderColor: '#5b6582',
           borderWidth: 2
       },
       {
@@ -53,8 +53,8 @@ export class DashboardComponent implements OnInit {
       datasets: [{
           label: 'Premium',
           data: [50, 80, 60, 120, 80, 100, 60],
-          backgroundColor: '#f74d71',
-          borderColor: '#f74d71',
+          backgroundColor: '#5b6582',
+          borderColor: '#5b6582',
           borderWidth: 2
       },
       {
@@ -92,20 +92,22 @@ export class DashboardComponent implements OnInit {
   chart3 = {
     data:{
       datasets: [{
-          data: [10, 20, 30],
-          backgroundColor: ["#f74d71","#ffc107","#36a2eb"],
+          data: [6, 12, 10],
+          backgroundColor: ["#5b6582","#98a4c7","#36a2eb"],
       }],
       labels: [
-          'Red',
-          'Yellow',
-          'Blue'
+          'html',
+          'css',
+          'javascript'
       ]
       
     },
     options:{
       legend: {          
-        position:'bottom'
+        position:'bottom',
+        display:false
       },
+      cutoutPercentage: 70
     }
   };
 
@@ -123,21 +125,12 @@ export class DashboardComponent implements OnInit {
       data: this.chart2.data ,
       options: this.chart2.options
     });
-    new Chart('chart-pie',  {
-      type: 'pie',
-      data: this.chart3.data,
-      options:this.chart3.options
-    });
  new Chart('chart-doughnut',  {
       type: 'doughnut',
       data: this.chart3.data,
       options:this.chart3.options
     });
- new Chart('chart-polar',  {
-      type: 'polarArea',
-      data: this.chart3.data,
-      options:this.chart3.options
-    });
+
   }
 
 }

@@ -1,9 +1,20 @@
-$bg-color:#e9eaec;
-$navbar-bg-color : #25292f;
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+$bg-color:#f2f3f8;
+$navbar-bg-color : #242939;
 $navbar-header-bg-color:#2f353e;
-$navbar-color:#676f7b;
+$navbar-color:#6e7899;
 $sidebar-bg-color:#fff;
-$sidebar-color:#75797d;
+$sidebar-color:#3d4465;
+$sidebar-icon-color:#c4cff9;
+
+body {
+  // font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-size: .9rem;
+}
+
 
 .wrapper.default-theme {
 
@@ -43,17 +54,20 @@ $sidebar-color:#75797d;
         color: lighten($navbar-color, 15%);
       }
     }
-    .nav-alert{
-      border-color:$navbar-bg-color;
+
+    .nav-alert {
+      border-color: #2f3546;
     }
   }
 
   main {
     .sidebar {
       background: $sidebar-bg-color;
-      > div{
-        border-color: rgba($sidebar-color,.4);
+
+      >div {
+        border-color: rgba($sidebar-color, .1);
       }
+
       a.sidebar-link {
         color: $sidebar-color;
 
@@ -65,9 +79,62 @@ $sidebar-color:#75797d;
         }
 
         .role {
-          color: rgba($sidebar-color, .5);
+          color: rgba($sidebar-color, .8);
         }
       }
+
+      .sidebar-menu {
+        .menu-header {
+          color: rgba($sidebar-color, .5);
+        }
+
+        .menu-items {
+          a {
+            color: rgba($sidebar-color, .7);
+
+            i {
+              color: $sidebar-icon-color;
+              color: #abb7da;
+              color: rgba(140, 165, 239, 0.6);
+              border: none;
+              width: auto;
+              // background: #f2f3f8;
+              // color: #5d78ff;
+              // background: #f0f3ff;
+              // color: #93a2dd;
+              font-size: 1rem;
+            }
+          }
+        }
+
+        .progress-wrapper {
+          color: rgba($sidebar-color, .6);
+        }
+      }
+    }
+  }
+
+  .card {
+    box-shadow: 1px 1px 2px rgba(#5b6582, .1);
+
+    .card-title {
+      color: rgba($sidebar-color, .8);
+    }
+
+    .card-icon {
+      i {
+        // background-color:#5b6582;
+        color: #98a4c7;
+      }
+    }
+
+    .card-footer {
+      border-top: 1px solid rgb(242, 243, 248);
+      background: none;
+    }
+
+    .card-title {
+      border-bottom: 1px solid rgb(242, 243, 248);
     }
   }
 }

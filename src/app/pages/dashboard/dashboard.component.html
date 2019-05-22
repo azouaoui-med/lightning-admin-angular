@@ -8,10 +8,10 @@
         <div class="card-body">
           <div class="card-innerBody d-flex align-items-center">
             <div class="card-icon text-light">
-              <i class="fa fa-dollar bg-success" aria-hidden="true"></i>
+              <i class="fas fa-dollar-sign" aria-hidden="true"></i>
             </div>
             <div class="ml-auto">
-              <p class="card-title text-right text-muted">Revenue</p>
+              <p class="card-label text-right text-muted">Revenue</p>
               <h4 class="card-text text-right ">$ 199,099</h4>
             </div>
           </div>
@@ -31,10 +31,10 @@
         <div class="card-body">
           <div class="card-innerBody d-flex align-items-center">
             <div class="card-icon text-light">
-              <i class="fa fa-shopping-cart bg-info" aria-hidden="true"></i>
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </div>
             <div class="ml-auto">
-              <p class="card-title text-right text-muted">Orders</p>
+              <p class="card-label text-right text-muted">Orders</p>
               <h4 class="card-text text-right ">2,200</h4>
             </div>
           </div>
@@ -54,10 +54,10 @@
         <div class="card-body">
           <div class="card-innerBody d-flex align-items-center">
             <div class="card-icon text-light">
-              <i class="fa fa-users bg-danger" aria-hidden="true"></i>
+              <i class="fa fa-users" aria-hidden="true"></i>
             </div>
             <div class="ml-auto">
-              <p class="card-title text-right text-muted">Visitors</p>
+              <p class="card-label text-right text-muted">Visitors</p>
               <h4 class="card-text text-right ">702,258</h4>
             </div>
           </div>
@@ -77,10 +77,10 @@
         <div class="card-body">
           <div class="card-innerBody d-flex align-items-center">
             <div class="card-icon text-light">
-              <i class="fa fa-heartbeat bg-warning" aria-hidden="true"></i>
+              <i class="fa fa-heartbeat" aria-hidden="true"></i>
             </div>
             <div class="ml-auto">
-              <p class="card-title text-right text-muted">Followers</p>
+              <p class="card-label text-right text-muted">Followers</p>
               <h4 class="card-text text-right "> +50K</h4>
             </div>
           </div>
@@ -101,22 +101,23 @@
   <div class="row">
     <div class="col-md-12 col-lg-6 mb-4">
       <div class="card border-0 rounded-0">
+        <div class="card-title mb-1 p-3">
+          <h6>Chart Line</h6>
+        </div>
         <div class="card-body">
-          <div class="card-title mb-4">
-            <h5>Chart Line</h5>
-          </div>
           <div class="chart-container" style="position: relative;">
             <canvas id="chart-line" width="2" height="1"></canvas>
           </div>
         </div>
       </div>
     </div>
+
     <div class="col-md-12 col-lg-6 mb-4">
       <div class="card border-0 rounded-0">
+        <div class="card-title mb-1 p-3">
+          <h6>Chart Bar</h6>
+        </div>
         <div class="card-body">
-          <div class="card-title mb-4">
-            <h5>Chart Bar</h5>
-          </div>
           <div class="chart-container" style="position: relative;">
             <canvas id="chart-bar" width="2" height="1"></canvas>
           </div>
@@ -125,40 +126,91 @@
     </div>
     <div class="col-md-12 col-lg-4 mb-4">
       <div class="card border-0 rounded-0">
+        <div class="card-title mb-1 p-3">
+          <h6>Chart Doughnut</h6>
+        </div>
         <div class="card-body">
-          <div class="card-title mb-4">
-            <h5>Chart Pie</h5>
-          </div>
           <div class="chart-container" style="position: relative;">
-            <canvas id="chart-pie" ></canvas>
+            <canvas id="chart-doughnut"></canvas>
           </div>
+        </div>
+        <div class="card-footer">
+          <div class="legend d-flex just">
+            <div class="flex-fill text-center"><span class="d-inline-block rounded-circle mr-2"
+                style="background: #5b6582;"></span><small>HTML</small></div>
+            <div class="flex-fill text-center"><span class="d-inline-block rounded-circle mr-2"
+                style="background: #98a4c7;"></span><small>CSS</small></div>
+            <div class="flex-fill text-center"><span class="d-inline-block rounded-circle mr-2"
+                style="background: #36a2eb;"></span><small>Javascript</small></div>
+          </div>
+
         </div>
       </div>
     </div>
-    <div class="col-md-12 col-lg-4 mb-4">
+
+    <div class="col-md-12 col-lg-8 mb-4">
       <div class="card border-0 rounded-0">
+        <div class="card-title mb-1 p-3">
+          <h6>Purchases</h6>
+        </div>
         <div class="card-body">
-          <div class="card-title mb-4">
-            <h5>Chart Doughnut</h5>
-          </div>
-          <div class="chart-container" style="position: relative;">
-            <canvas id="chart-doughnut" ></canvas>
+          <div class="table-responsive-md">
+            <div class="table-responsive">
+              <table class="table ">
+                <thead>
+                  <tr>
+                    <th style="width:40%;">Product</th>
+                    <th class="number">Price</th>
+                    <th style="width:20%;">Date</th>
+                    <th style="width:20%;">State</th>
+                    <th class="actions" style="width:5%;"></th>
+                  </tr>
+                </thead>
+                <tbody class="no-border-x">
+                  <tr>
+                    <td>Sony Xperia M4</td>
+                    <td class="number">$149</td>
+                    <td>Aug 23, 2018</td>
+                    <td class="text-success">Completed</td>
+                    <td class="actions"><a class="icon" href="#"><i class="mdi mdi-plus-circle-o"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td>Apple iPhone 6</td>
+                    <td class="number">$535</td>
+                    <td>Aug 20, 2018</td>
+                    <td class="text-success">Completed</td>
+                    <td class="actions"><a class="icon" href="#"><i class="mdi mdi-plus-circle-o"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td>Samsung Galaxy S7</td>
+                    <td class="number">$583</td>
+                    <td>Aug 18, 2018</td>
+                    <td class="text-warning">Pending</td>
+                    <td class="actions"><a class="icon" href="#"><i class="mdi mdi-plus-circle-o"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td>HTC One M9</td>
+                    <td class="number">$350</td>
+                    <td>Aug 15, 2018</td>
+                    <td class="text-warning">Pending</td>
+                    <td class="actions"><a class="icon" href="#"><i class="mdi mdi-plus-circle-o"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td>Sony Xperia Z5</td>
+                    <td class="number">$495</td>
+                    <td>Aug 13, 2018</td>
+                    <td class="text-danger">Cancelled</td>
+                    <td class="actions"><a class="icon" href="#"><i class="mdi mdi-plus-circle-o"></i></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
-    <div class="col-md-12 col-lg-4 mb-4">
-      <div class="card border-0 rounded-0">
-        <div class="card-body">
-          <div class="card-title mb-4">
-            <h5>Chart Polar Area</h5>
-          </div>
-          <div class="chart-container" style="position: relative;">
-            <canvas id="chart-polar" ></canvas>
-          </div>
-        </div>
-      </div>
-    </div>
+
   </div>
 
 </div>

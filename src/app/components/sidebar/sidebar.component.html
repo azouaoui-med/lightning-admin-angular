@@ -7,25 +7,28 @@
       </div>
     </div>
     <div class="profile-details text-center pb-4">
-      <p class="mb-0 text-uppercase name">Ahmed Amine</p>
-      <small class="text-uppercase role">Web Developer</small>
+      <p class="mb-0 text-uppercase name">Jhon Doe</p>
+      <small class="text-uppercase role">Administrator</small>
     </div>
   </div>
   <div class="sidebar-search pt-1 pb-1 pl-3 pr-3">
-      <input type="search" class="form-control rounded-pill" name="search" placeholder="Search ...">
+    <input type="search" class="form-control rounded-pill" name="search" placeholder="Search ...">
   </div>
   <nav class="sidebar-menu pt-3 pb-3">
-    <ul>
+    <div class="menu-header mt-3 mb-2">
+      Components
+    </div>
+    <ul class="menu-items">
       <li class="active">
         <a href="#" routerLink="/">
           <i class="fa fa-tv"></i>
           <span>Dashboard</span>
-          <span class="badge badge-danger rounded-0 ml-auto text-light">New</span>
+          <span class="badge badge-warning rounded-0 text-dark p-1">NEW</span>
         </a>
       </li>
       <li>
         <a href="#" routerLink="/forms">
-          <i class="fa fa-diamond"></i>
+          <i class="fas fa-gem"></i>
           <span>Forms</span>
         </a>
       </li>
@@ -49,10 +52,33 @@
       </li>
       <li>
         <a href="#" routerLink="/notifications">
-          <i class="fa fa-bell-o"></i>
+          <i class="fas fa-bell"></i>
           <span>Notifications</span>
         </a>
       </li>
     </ul>
+    <div class="menu-header mt-4 mb-2">
+      Performance
+    </div>
+    <div class="progress-wrapper pt-2 pb-2">
+      <div class="mb-4">
+        <div class="progress-status"><span>CPU</span><span class="float-right">50%</span></div>
+        <div class="progress mb-3" style="height: 4px;">
+          <div class="progress-bar" style="width: 50%; "></div>
+        </div>
+      </div>
+      <div class="mb-4">
+        <div class="progress-status"><span>DISK</span><span class="float-right">30%</span></div>
+        <div class="progress mb-3" style="height: 4px;">
+          <div class="progress-bar" style="width: 30%; "></div>
+        </div>
+      </div>
+      <!-- <div class="mb-4">
+        <div class="progress-status"><span>Memory</span><span class="float-right">80%</span></div>
+        <div class="progress mb-3" style="height: 4px;">
+          <div class="progress-bar" style="width: 80%; "></div>
+        </div>
+      </div> -->
+    </div>
   </nav>
 </aside>
