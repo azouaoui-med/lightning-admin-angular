@@ -55,6 +55,10 @@
       }
 
       .sidebar-menu {
+        >div {
+          padding: 0 1.5rem;
+        }
+
         .menu-header {
           padding: 0 1.5rem;
           font-size: .75rem;
