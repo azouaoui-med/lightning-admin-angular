@@ -8,7 +8,8 @@ import { MapsComponent } from './pages/maps/maps.component';
 import { NotificationsComponent } from './pages/notifications/notifications.component';
 
 const routes: Routes = [
-  {path: '', component: DashboardComponent},
+  {path: '',   redirectTo: '/dashboard', pathMatch: 'full'},
+  {path: 'dashboard', component: DashboardComponent},
   {path: 'forms', component: FormsComponent},
   {path: 'tables', component: TablesComponent},
   {path: 'typography', component: TypographyComponent},

@@ -5,14 +5,22 @@
     padding: 0;
     border-bottom: 1px solid;
 
-    .navbar-brand {
-      font-size: 1rem;
-      font-weight: normal;
-      letter-spacing: 5px;
+    .navbar-header {
+
+      .navbar-brand {
+        font-size: 1rem;
+        font-weight: normal;
+        letter-spacing: 2px;
+
+        span {
+          display: none;
+        }
+      }
     }
 
     .nav-toggler-right {
       position: relative;
+
 
       button {
 
@@ -60,18 +68,6 @@
 
       &.user-profile {
         transform: translateX(2px);
-      }
-
-      &.notifications {
-        background-color: #ff61c5;
-        box-shadow: 0px 0px 4px  #ff61c5;
-        
-      }
-      
-      &.messages {
-        background-color: #61b8ff;
-        box-shadow: 0px 0px 4px #61b8ff;
-
       }
     }
 
@@ -134,7 +130,7 @@
         height: 40px;
         line-height: 40px;
         background: #282f48;
-        border-radius:0;
+        border-radius: 0;
       }
     }
 
@@ -145,8 +141,7 @@
       input.navbar-search {
         max-width: 500px;
         border-radius: 0;
-        background: #282f48;
-        border:none;
+        border: none;
         height: 40px;
         font-size: .9rem;
       }
@@ -154,14 +149,19 @@
     }
 
     @media (min-width: 768px) {
+
       .sidebar-toggler {
         display: none;
       }
 
       .navbar-header {
         width: $sidebar-width;
-
+        margin-left: 0!important;
+        .navbar-brand span {
+          display: inline-block;
+        }
       }
+
 
       .left-nav {
         display: flex;

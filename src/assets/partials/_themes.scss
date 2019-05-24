@@ -34,8 +34,8 @@ body {
 
     .left-nav {
       input.navbar-search {
-        // background-color: $navbar-bg-color;
-        border-color: $navbar-color;
+        background: #282f48;
+
       }
     }
 
@@ -57,10 +57,26 @@ body {
 
     .nav-alert {
       border-color: #2f3546;
+
+      &.notifications {
+        background-color: #ff61c5;
+        box-shadow: 0px 0px 4px #ff61c5;
+
+      }
+
+      &.messages {
+        background-color: #61b8ff;
+        box-shadow: 0px 0px 4px #61b8ff;
+
+      }
     }
   }
 
   main {
+    .overlay {
+      background: #242939;
+    }
+
     .sidebar {
       background: $sidebar-bg-color;
 
@@ -98,11 +114,17 @@ body {
               color: rgba(140, 165, 239, 0.6);
               border: none;
               width: auto;
-              // background: #f2f3f8;
-              // color: #5d78ff;
-              // background: #f0f3ff;
-              // color: #93a2dd;
               font-size: 1rem;
+            }
+
+            &:hover,
+            &.active {
+              background: #f5f5f9;
+              color: rgba($sidebar-color, .9);
+
+              i {
+                color: #95b0ff;
+              }
             }
           }
         }
@@ -123,7 +145,6 @@ body {
 
     .card-icon {
       i {
-        // background-color:#5b6582;
         color: #98a4c7;
       }
     }
@@ -160,11 +181,12 @@ body {
 
   .btn {
     font-size: .9rem;
+
     &.btn-lightning {
       color: #f0f3ff;
       background-color: #5b6582;
       border-color: #5b6582;
-      
+
       &:hover {
         background-color: #4c5671;
       }
@@ -182,11 +204,12 @@ body {
       }
     }
   }
-  .form-control{
+
+  .form-control {
     font-size: .9rem;
   }
 
-  .text-lightning{
+  .text-lightning {
     color: #98a4c7;
   }
 }

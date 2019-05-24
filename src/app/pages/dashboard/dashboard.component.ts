@@ -107,7 +107,7 @@ export class DashboardComponent implements OnInit {
         position:'bottom',
         display:false
       },
-      cutoutPercentage: 70
+      cutoutPercentage: 80
     }
   };
 

@@ -117,6 +117,13 @@
 
   &.pinned-sidebar {
     @media (min-width: 768px) {
+      .navbar-header{
+        width: 70px!important;
+        span{
+          display: none!important;
+        }
+      }
+
       .sidebar {
         width: 70px;
 
@@ -127,9 +134,12 @@
             height: 40px;
           }
 
-          .profile-details {
-            display: none;
-          }
+        }
+
+        .profile-details,
+        .menu-header,
+        .view-source {
+          display: none;
         }
 
         .sidebar-menu {
