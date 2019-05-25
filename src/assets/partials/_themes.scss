@@ -3,15 +3,14 @@
 
 $bg-color:#f2f3f8;
 $navbar-bg-color : #242939;
-$navbar-header-bg-color:#2f353e;
 $navbar-color:#6e7899;
 $sidebar-bg-color:#fff;
 $sidebar-color:#3d4465;
 $sidebar-icon-color:#c4cff9;
+$border-color: #f2f3f8;
 
 body {
-  // font-family: 'Roboto', sans-serif;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins','Roboto', sans-serif;
   font-size: .9rem;
 }
 
@@ -24,10 +23,6 @@ body {
     background: $navbar-bg-color;
     border-color: rgba($navbar-color, .3);
 
-    // .navbar-header {
-    //   background: $navbar-header-bg-color;
-    // }
-
     .navbar-brand {
       color: lighten($navbar-color, 25%);
     }
@@ -35,7 +30,10 @@ body {
     .left-nav {
       input.navbar-search {
         background: #282f48;
-
+        color:$navbar-color;
+        &::placeholder{
+          color:rgba($navbar-color, .6);
+        }
       }
     }
 
@@ -48,6 +46,7 @@ body {
 
       i {
         border-color: $navbar-color;
+        background: #282f48;
       }
 
       &:hover {
@@ -128,10 +127,7 @@ body {
             }
           }
         }
-
-        .progress-wrapper {
-          color: rgba($sidebar-color, .6);
-        }
+        
       }
     }
   }
@@ -150,12 +146,12 @@ body {
     }
 
     .card-footer {
-      border-top: 1px solid rgb(242, 243, 248);
+      border-top: 1px solid $border-color;
       background: none;
     }
 
     .card-title {
-      border-bottom: 1px solid rgb(242, 243, 248);
+      border-bottom: 1px solid $border-color;
     }
   }
 
@@ -163,19 +159,19 @@ body {
 
     th,
     td {
-      border-top: 1px solid #e2e8fb;
+      border-top: 1px solid darken($border-color,2%);
     }
 
     thead th {
-      border-bottom: 2px solid #e2e8fb;
+      border-bottom: 2px solid darken($border-color,2%);
     }
 
     &.table-striped tbody tr:nth-of-type(odd) {
-      background-color: #f2f3f8;
+      background-color: lighten($border-color,1%);
     }
 
     &.table-hover tbody tr:hover {
-      background-color: #f2f3f8;
+      background-color: lighten($border-color, 1%);
     }
   }
 

@@ -98,12 +98,7 @@
             }
           }
         }
-
-        .progress-wrapper {
-          padding: 0 1.5rem;
-          font-size: .75rem;
-          font-weight: 600;
-        }
+       
       }
     }
 
@@ -118,14 +113,14 @@
   &.pinned-sidebar {
     @media (min-width: 768px) {
       .navbar-header{
-        width: 70px!important;
+        width: $sidebar-pinned-wdth!important;
         span{
           display: none!important;
         }
       }
 
       .sidebar {
-        width: 70px;
+        width: $sidebar-pinned-wdth;
 
         .sidebar-profile {
 
