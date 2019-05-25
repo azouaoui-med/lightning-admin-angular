@@ -1,9 +1,19 @@
-$bg-color:#e9eaec;
-$navbar-bg-color : #25292f;
-$navbar-header-bg-color:#2f353e;
-$navbar-color:#676f7b;
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+$bg-color:#f2f3f8;
+$navbar-bg-color : #242939;
+$navbar-color:#6e7899;
 $sidebar-bg-color:#fff;
-$sidebar-color:#75797d;
+$sidebar-color:#3d4465;
+$sidebar-icon-color:#c4cff9;
+$border-color: #f2f3f8;
+
+body {
+  font-family: 'Poppins','Roboto', sans-serif;
+  font-size: .9rem;
+}
+
 
 .wrapper.default-theme {
 
@@ -13,18 +23,17 @@ $sidebar-color:#75797d;
     background: $navbar-bg-color;
     border-color: rgba($navbar-color, .3);
 
-    // .navbar-header {
-    //   background: $navbar-header-bg-color;
-    // }
-
     .navbar-brand {
       color: lighten($navbar-color, 25%);
     }
 
     .left-nav {
       input.navbar-search {
-        // background-color: $navbar-bg-color;
-        border-color: $navbar-color;
+        background: #282f48;
+        color:$navbar-color;
+        &::placeholder{
+          color:rgba($navbar-color, .6);
+        }
       }
     }
 
@@ -37,23 +46,43 @@ $sidebar-color:#75797d;
 
       i {
         border-color: $navbar-color;
+        background: #282f48;
       }
 
       &:hover {
         color: lighten($navbar-color, 15%);
       }
     }
-    .nav-alert{
-      border-color:$navbar-bg-color;
+
+    .nav-alert {
+      border-color: #2f3546;
+
+      &.notifications {
+        background-color: #ff61c5;
+        box-shadow: 0px 0px 4px #ff61c5;
+
+      }
+
+      &.messages {
+        background-color: #61b8ff;
+        box-shadow: 0px 0px 4px #61b8ff;
+
+      }
     }
   }
 
   main {
+    .overlay {
+      background: #242939;
+    }
+
     .sidebar {
       background: $sidebar-bg-color;
-      > div{
-        border-color: rgba($sidebar-color,.4);
+
+      >div {
+        border-color: rgba($sidebar-color, .1);
       }
+
       a.sidebar-link {
         color: $sidebar-color;
 
@@ -65,9 +94,118 @@ $sidebar-color:#75797d;
         }
 
         .role {
-          color: rgba($sidebar-color, .5);
+          color: rgba($sidebar-color, .8);
         }
       }
+
+      .sidebar-menu {
+        .menu-header {
+          color: rgba($sidebar-color, .5);
+        }
+
+        .menu-items {
+          a {
+            color: rgba($sidebar-color, .7);
+
+            i {
+              color: $sidebar-icon-color;
+              color: #abb7da;
+              color: rgba(140, 165, 239, 0.6);
+              border: none;
+              width: auto;
+              font-size: 1rem;
+            }
+
+            &:hover,
+            &.active {
+              background: #f5f5f9;
+              color: rgba($sidebar-color, .9);
+
+              i {
+                color: #95b0ff;
+              }
+            }
+          }
+        }
+        
+      }
     }
+  }
+
+  .card {
+    box-shadow: 1px 1px 2px rgba(#5b6582, .1);
+
+    .card-title {
+      color: rgba($sidebar-color, .8);
+    }
+
+    .card-icon {
+      i {
+        color: #98a4c7;
+      }
+    }
+
+    .card-footer {
+      border-top: 1px solid $border-color;
+      background: none;
+    }
+
+    .card-title {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+
+  .table {
+
+    th,
+    td {
+      border-top: 1px solid darken($border-color,2%);
+    }
+
+    thead th {
+      border-bottom: 2px solid darken($border-color,2%);
+    }
+
+    &.table-striped tbody tr:nth-of-type(odd) {
+      background-color: lighten($border-color,1%);
+    }
+
+    &.table-hover tbody tr:hover {
+      background-color: lighten($border-color, 1%);
+    }
+  }
+
+  .btn {
+    font-size: .9rem;
+
+    &.btn-lightning {
+      color: #f0f3ff;
+      background-color: #5b6582;
+      border-color: #5b6582;
+
+      &:hover {
+        background-color: #4c5671;
+      }
+    }
+
+    &.btn-outline-lightning {
+      color: #5b6582;
+      background-color: transparent;
+      border-color: #5b6582;
+
+      &:hover {
+        color: #f0f3ff;
+        background-color: #5b6582;
+        border-color: #5b6582;
+      }
+    }
+  }
+
+  .form-control {
+    font-size: .9rem;
+  }
+
+  .text-lightning {
+    color: #98a4c7;
   }
 }

@@ -5,14 +5,22 @@
     padding: 0;
     border-bottom: 1px solid;
 
-    .navbar-brand {
-      font-size: 1rem;
-      font-weight: normal;
-      letter-spacing: 5px;
+    .navbar-header {
+
+      .navbar-brand {
+        font-size: 1rem;
+        font-weight: normal;
+        letter-spacing: 2px;
+
+        span {
+          display: none;
+        }
+      }
     }
 
     .nav-toggler-right {
       position: relative;
+
 
       button {
 
@@ -45,22 +53,21 @@
 
     .nav-alert {
       display: inline-block;
-      width: 13px;
-      height: 13px;
+      width: 11px;
+      height: 11px;
       border-radius: 50%;
       position: absolute;
       top: 0;
-      right: 20px;
       border: 3px solid #1c1e21;
+      transform: translateX(13px);
 
-      &.bg-danger {
-        box-shadow: 0px 0px 4px #ff6161;
-
+      @media (min-width: 768px) {
+        right: 20px;
+        transform: translateX(0);
       }
 
-      &.bg-success {
-        box-shadow: 0px 0px 4px #61ff66;
-
+      &.user-profile {
+        transform: translateX(2px);
       }
     }
 
@@ -82,7 +89,7 @@
       border-top: 1px solid;
       padding-top: 1rem;
       padding-bottom: 1rem;
-      height: calc(100vh - #{$navbar-height} + 1px)!important;
+      height: calc(100vh - #{$navbar-height} + 1px) !important;
 
       ul {
         display: flex;
@@ -117,7 +124,11 @@
       padding: 0;
 
       i {
-        @extend .icon-style;
+        font-size: 1.1rem;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;    
+        border-radius: 0;
       }
     }
 
@@ -127,38 +138,46 @@
 
       input.navbar-search {
         max-width: 500px;
-        border-radius: 50px;
+        border-radius: 0;
+        border: none;
+        height: 40px;
+        font-size: .9rem;
       }
 
     }
 
     @media (min-width: 768px) {
+
       .sidebar-toggler {
         display: none;
       }
 
       .navbar-header {
         width: $sidebar-width;
-
+        margin-left: 0!important;
+        .navbar-brand span {
+          display: inline-block;
+        }
       }
+
 
       .left-nav {
         display: flex;
       }
 
       .nav-link {
-        padding-left: .8rem;
-        padding-right: .8rem;
+        padding-left: .3rem;
+        padding-right: .3rem;
       }
 
       .nav-alert {
-        right: 10px;
+        right: 12px;
       }
 
       .right-nav {
-        height: 100%!important;
+        height: 100% !important;
         border-top: none;
-        background: none!important;
+        background: none !important;
 
         ul {
 
